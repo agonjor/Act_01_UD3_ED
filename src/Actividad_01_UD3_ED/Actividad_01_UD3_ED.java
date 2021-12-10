@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 public class Actividad_01_UD3_ED 
 {
-    private static byte[] buffer = new byte[1000];
+    private static byte[] intermedio = new byte[1000];
     private static String fileName = "fichero.dat";
     private static FileInputStream inputStream = null;
     private static BufferedInputStream inputBuffer = null;
@@ -31,9 +31,9 @@ public class Actividad_01_UD3_ED
     {
         int total = 0;
         int nRead = 0;
-        while((nRead = inputStream.read(buffer)) != -1) 
+        while((nRead = inputStream.read(intermedio)) != -1) 
         {
-            System.out.println(new String(buffer));
+            System.out.println(new String(intermedio));
             total += nRead;
         }
         
